@@ -2,7 +2,32 @@ let app = Vue.createApp({
     data() {
         return {
             show: false,
-            page: 'dashboard'
+            page: 'players',
+            dashboard: {
+
+            },
+            server: {
+
+            },
+            vehicle: {
+
+            },
+            players: {
+                list: [
+                    {
+                        id: 0,
+                        name: 'Marlon'
+                    },
+                    {
+                        id: 1,
+                        name: 'Justin'
+                    },
+                    {
+                        id: 3,
+                        name: 'Lisa'
+                    },
+                ]
+            }
         }
     },
     mounted() {

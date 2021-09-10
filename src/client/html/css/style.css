@@ -59,3 +59,60 @@ body {
     left: 0;
     top: 2.6vw;
 }
+
+.players-search {
+    position: absolute;
+    width: 42.5%;
+    height: 3.5vw;
+    left: 1%;
+    top: 1%;
+    border-bottom: 0.1vw solid rgba(255, 255, 255, 0.5);
+}
+
+.players-search-title {
+    position: absolute;
+    font-size: 0.75vw;
+    top: 10%;
+
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.players-search-input {
+    position: absolute;
+    width: 70%;
+    background: transparent;
+    outline: none;
+    bottom: 20%;
+    border: none;
+    font-size: 0.9vw;
+    color: rgba(255, 255, 255, 0.8);
+    border-bottom: 0.1vw solid rgba(255, 255, 255, 0.5);
+}
+
+.players-search-input:hover {
+    border-bottom: 0.1vw solid rgba(255, 255, 255, 0.8);
+}
+
+.players-search-input:focus {
+    border-bottom: 0.1vw solid rgba(255, 255, 255, 0.8);
+}
+
+.players-search-refresh {
+    position: absolute;
+    right: 0;
+    width: 25%;
+    height: 1.5vw;
+    font-size: 0.8vw;
+    color: rgba(55, 81, 88, 0.8);
+    background: rgba(255, 255, 255, 0.5);
+    bottom: 20%;
+    border-radius: 0.25vw;
+    outline: none;
+    border: none;
+    transition: ease-out .4s;
+}
+
+.players-search-refresh:hover {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.8);
+}
