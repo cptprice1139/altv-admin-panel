@@ -35,6 +35,26 @@
                 <button class="players-search-refresh"><i class="fas fa-sync-alt"></i> Refresh</button>
             </div>
             <div class="players-container">
+                <table class="players-container-table">
+                    <thead>
+                        <tr class="players-container-tr">
+                            <th @click="sort('id')">Id</th>
+                            <th @click="sort('name')">Name</th>
+                            <th @click="sort('ping')">Ping</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="players-container-tr" v-for="player in sortedPlayersList" v-on:click="switchPlayerPage(player.name)"
+                            v-bind:class="{ 'cp-active' : players.page === player.name}"
+                        >
+                            <td style="width: 20%">{{player.id}}</td>
+                            <td style="width: 68.5%">{{player.name}}</td>
+                            <td style="width: 20%">{{player.ping}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="players-information">
 
             </div>
         </div>
