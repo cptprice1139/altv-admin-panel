@@ -44,7 +44,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="players-container-tr" v-for="player in sortedPlayersList" v-on:click="switchPlayerPage(player.name)"
+                        <tr class="players-container-tr" v-for="player in sortedPlayersList" v-on:click="switchPlayerPage(player)"
                             v-bind:class="{ 'cp-active' : players.page === player.name}"
                         >
                             <td style="width: 20%">{{player.id}}</td>
@@ -54,8 +54,74 @@
                     </tbody>
                 </table>
             </div>
+            <hr class="players-spacer">
             <div class="players-information">
+                <div class="players-information-nav">
+                    <div style="position: absolute; bottom: 5%; text-align: left; color: rgba(255, 255, 255, 0.8); font-size: 1.2vw; font-weight: bold;">
+                        {{players.currentSelected.name}}
+                    </div>
+                </div>
+                <div class="players-information-nav-btn" v-on:click="switchPlayerInformationType('information')" v-bind:class="{ 'ca-active' : players.informationType === 'information'}">Information</div>
+                <div style="left: 51%" class="players-information-nav-btn" v-on:click="switchPlayerInformationType('actions')" v-bind:class="{ 'ca-active' : players.informationType === 'actions'}">Actions</div>
+                <div class="players-information-container" v-if="players.informationType === 'information'">
+                    <table class="players-container-table">
+                        <thead>
+                            <tr class="players-container-tr">
+                                <th>Information</th>
+                                <th>Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="players-container-tr">
+                                <td style="width: 7.5%">Name</td>
+                                <td style="width: 20%">Marlon magaroni</td>
+                            </tr>
+                            <tr class="players-container-tr">
+                                <td style="width: 7.5%">Position</td>
+                                <td style="width: 20%">x: -463,626, y: -832,342, z: 35,643</td>
+                            </tr>
+                            <tr class="players-container-tr">
+                                <td style="width: 7.5%">Health</td>
+                                <td style="width: 20%">200</td>
+                            </tr>
+                            <tr class="players-container-tr">
+                                <td style="width: 7.5%">Armor</td>
+                                <td style="width: 20%">50</td>
+                            </tr>
+                            <tr class="players-container-tr">
+                                <td style="width: 7.5%">Dimension</td>
+                                <td style="width: 20%">0</td>
+                            </tr>
+                            <tr class="players-container-tr">
+                                <td style="width: 7.5%">Model</td>
+                                <td style="width: 20%">freemode_male_01</td>
+                            </tr>
+                            <tr class="players-container-tr">
+                                <td style="width: 7.5%">Visible</td>
+                                <td style="width: 20%">True</td>
+                            </tr>
+                            <tr class="players-container-tr">
+                                <td style="width: 7.5%">Ip Address</td>
+                                <td style="width: 20%">:ffff:127.0.0.1</td>
+                            </tr>
+                            <tr class="players-container-tr">
+                                <td style="width: 7.5%">HardwareIdHash</td>
+                                <td style="width: 20%">674654363734565436</td>
+                            </tr>
+                            <tr class="players-container-tr">
+                                <td style="width: 7.5%">HardwareIdExHash</td>
+                                <td style="width: 20%">6435534423867653453</td>
+                            </tr>
+                            <tr class="players-container-tr">
+                                <td style="width: 7.5%">SocialClubId</td>
+                                <td style="width: 20%">235163634</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="players-information-container" v-if="players.informationType === 'actions'">
 
+                </div>
             </div>
         </div>
     </div>

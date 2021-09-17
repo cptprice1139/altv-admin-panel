@@ -15,7 +15,7 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background: linear-gradient(107.56deg, rgba(36, 51, 55, 0.8) 0%, rgba(100, 140, 142, 0.8) 100%);
+    background: linear-gradient(107.56deg, rgba(36, 51, 55, 0.85) 0%, rgba(100, 140, 142, 0.85) 100%);
 }
 
 .navigation {
@@ -64,7 +64,7 @@ body {
     position: absolute;
     width: 42.5%;
     height: 3.5vw;
-    left: 1%;
+    left: 1.5%;
     top: 1%;
     border-bottom: 0.1vw solid rgba(255, 255, 255, 0.3);
 }
@@ -122,7 +122,7 @@ body {
     width: 42.5%;
     height: 87%;
     max-height: 87%;
-    left: 1%;
+    left: 1.5%;
     top: 4vw;
 }
 
@@ -153,4 +153,65 @@ body {
 .cp-active {
     color: rgba(255, 255, 255, 1);
     border-bottom: 0.1vw solid rgba(255, 255, 255, 0.8);
+}
+
+.players-spacer {
+    position: absolute;
+    width: 50.5%;
+    top: 48.5%;
+    height: 0.1vw;
+    border: none;
+    left: 21%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: rotateZ(90deg);
+}
+
+.players-information {
+    position: absolute;
+    width: 50%;
+    height: 98%;
+    right: 1.5%;
+    top: 1%;
+}
+
+.players-information-nav-btn {
+    position: absolute;
+    top: 4vw;
+    width: 49%;
+    height: 2vw;
+    font-size: 0.89vw;
+    color: rgba(55, 81, 88, 0.8);
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 0.25vw;
+    outline: none;
+    border: none;
+    text-align-all: center;
+    font-weight: bold;
+    text-align: center;
+    transition: ease-out .4s;
+    line-height: 220%;
+}
+
+.players-information-nav-btn:hover {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.players-information-nav {
+    position: absolute;
+    width: 100%;
+    height: 3.5vw;
+    border-bottom: 0.1vw solid rgba(255, 255, 255, 0.3);
+}
+
+.ca-active {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.players-information-container {
+    position: absolute;
+    width: 100%;
+    min-height: 80%;
+    max-height: 80%;
+    top: 6.5vw;
 }

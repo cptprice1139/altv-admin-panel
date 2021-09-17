@@ -26,7 +26,7 @@ let app = Vue.createApp({
                     },
                     {
                         id: 5,
-                        name: 'Test3',
+                        name: 'Marlon magaroni',
                         ping: 32
                     },
                     {
@@ -67,20 +67,34 @@ let app = Vue.createApp({
                 ],
                 currentSort: 'id',
                 currentSortDir: 'asc',
-                page: ''
+                page: '',
+                informationType: 'information',
+                currentSelected: {
+                    id: 0,
+                    name: '',
+                    ping: 0
+                },
+                listInformation: {
+                    'AltV Name': 'Marlon magaroni'
+                }
             }
         }
     },
     mounted() {
         this.show = true;
+
+         this.players.currentSelected = this.players.list[0] !== undefined ? this.players.list[0] : new this.currentSelected;
     },
     methods: {
         switchPage(page) {
             if (this.page !== page) this.page = page;
         },
-        switchPlayerPage(name) {
-            if (this.players.page !== name) this.players.page = name;
-            console.log(this.players.page)
+        switchPlayerPage(player) {
+            if (this.players.page !== player.name) this.players.page = player.name;
+            this.players.currentSelected = player;
+        },
+        switchPlayerInformationType(name) {
+            if (this.players.informationType !== name) this.players.informationType = name;
         },
         sort(id) {
             this.players.currentSortDir = this.players.currentSortDir === 'asc' ? 'desc' : 'asc';
