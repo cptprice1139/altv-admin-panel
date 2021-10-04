@@ -13,77 +13,24 @@ let app = Vue.createApp({
 
             },
             players: {
-                list: [
-                    {
-                        id: 1,
-                        name: 'Test1',
-                        ping: 12
-                    },
-                    {
-                        id: 2,
-                        name: 'Test2',
-                        ping: 354
-                    },
-                    {
-                        id: 5,
-                        name: 'Marlon magaroni',
-                        ping: 32
-                    },
-                    {
-                        id: 5,
-                        name: 'Test4',
-                        ping: 11
-                    },
-                    {
-                        id: 3,
-                        name: 'Test5',
-                        ping: 7
-                    },
-                    {
-                        id: 6,
-                        name: 'Test6',
-                        ping: 54
-                    },
-                    {
-                        id: 46,
-                        name: 'Test7',
-                        ping: 34
-                    },
-                    {
-                        id: 23,
-                        name: 'Test8',
-                        ping: 23
-                    },
-                    {
-                        id: 97,
-                        name: 'Test9',
-                        ping: 87
-                    },
-                    {
-                        id: 105,
-                        name: 'Test10',
-                        ping: 12
-                    },
-                ],
+                list: [],
                 currentSort: 'id',
                 currentSortDir: 'asc',
                 page: '',
                 informationType: 'information',
-                currentSelected: {
-                    id: 0,
-                    name: '',
-                    ping: 0
-                },
-                listInformation: {
-                    'AltV Name': 'Marlon magaroni'
-                }
+                currentSelected: {},
+                listInformation: {}
             }
         }
     },
     mounted() {
         this.show = true;
 
-         this.players.currentSelected = this.players.list[0] !== undefined ? this.players.list[0] : new this.currentSelected;
+        this.players.currentSelected = this.players.list[0] !== undefined ? this.players.list[0] : new this.currentSelected;
+
+        if ('alt' in window) {
+            alt.on('')
+        }
     },
     methods: {
         switchPage(page) {
@@ -95,6 +42,22 @@ let app = Vue.createApp({
         },
         switchPlayerInformationType(name) {
             if (this.players.informationType !== name) this.players.informationType = name;
+        },
+        addPlayerToList(name, pos, health, armor, dimension, model, visible, ip, hwidhash, hwidexhash, socialid) {
+            this.players.list.push({
+                _id: 0,
+                name: name,
+                pos: pos,
+                health: health,
+                armor: armor,
+                dimension: dimension,
+                model: model,
+                visible: visible,
+                ip: ip,
+                hwidhash: hwidhash,
+                hwidexhash: hwidexhash,
+                socialid: socialid
+            })
         },
         sort(id) {
             this.players.currentSortDir = this.players.currentSortDir === 'asc' ? 'desc' : 'asc';

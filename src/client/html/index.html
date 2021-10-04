@@ -55,7 +55,7 @@
                 </table>
             </div>
             <hr class="players-spacer">
-            <div class="players-information">
+            <div class="players-information" v-if="players.list.length > 0">
                 <div class="players-information-nav">
                     <div style="position: absolute; bottom: 5%; text-align: left; color: rgba(255, 255, 255, 0.8); font-size: 1.2vw; font-weight: bold;">
                         {{players.currentSelected.name}}
@@ -74,47 +74,47 @@
                         <tbody>
                             <tr class="players-container-tr">
                                 <td style="width: 7.5%">Name</td>
-                                <td style="width: 20%">Marlon magaroni</td>
+                                <td style="width: 20%">{{players.currentSelected.name}}</td>
                             </tr>
                             <tr class="players-container-tr">
                                 <td style="width: 7.5%">Position</td>
-                                <td style="width: 20%">x: -463,626, y: -832,342, z: 35,643</td>
+                                <td style="width: 20%">x: {{players.currentSelected.position.x}}, y: {{players.currentSelected.position.y}}, z: {{players.currentSelected.position.z}}</td>
                             </tr>
                             <tr class="players-container-tr">
                                 <td style="width: 7.5%">Health</td>
-                                <td style="width: 20%">200</td>
+                                <td style="width: 20%">{{players.currentSelected.health}}</td>
                             </tr>
                             <tr class="players-container-tr">
                                 <td style="width: 7.5%">Armor</td>
-                                <td style="width: 20%">50</td>
+                                <td style="width: 20%">{{players.currentSelected.armor}}</td>
                             </tr>
                             <tr class="players-container-tr">
                                 <td style="width: 7.5%">Dimension</td>
-                                <td style="width: 20%">0</td>
+                                <td style="width: 20%">{{players.currentSelected.dimension}}</td>
                             </tr>
                             <tr class="players-container-tr">
                                 <td style="width: 7.5%">Model</td>
-                                <td style="width: 20%">freemode_male_01</td>
+                                <td style="width: 20%">{{players.currentSelected.model}}</td>
                             </tr>
                             <tr class="players-container-tr">
                                 <td style="width: 7.5%">Visible</td>
-                                <td style="width: 20%">True</td>
+                                <td style="width: 20%">{{players.currentSelected.visible}}</td>
                             </tr>
                             <tr class="players-container-tr">
                                 <td style="width: 7.5%">Ip Address</td>
-                                <td style="width: 20%">:ffff:127.0.0.1</td>
+                                <td style="width: 20%">{{players.currentSelected.ip}}</td>
                             </tr>
                             <tr class="players-container-tr">
                                 <td style="width: 7.5%">HardwareIdHash</td>
-                                <td style="width: 20%">674654363734565436</td>
+                                <td style="width: 20%">{{players.currentSelected.hwidhash}}</td>
                             </tr>
                             <tr class="players-container-tr">
                                 <td style="width: 7.5%">HardwareIdExHash</td>
-                                <td style="width: 20%">6435534423867653453</td>
+                                <td style="width: 20%">{{players.currentSelected.hwidexhash}}</td>
                             </tr>
                             <tr class="players-container-tr">
                                 <td style="width: 7.5%">SocialClubId</td>
-                                <td style="width: 20%">235163634</td>
+                                <td style="width: 20%">{{players.currentSelected.socialid}}</td>
                             </tr>
                         </tbody>
                     </table>
