@@ -120,7 +120,38 @@
                     </table>
                 </div>
                 <div class="players-information-container" v-if="players.informationType === 'actions'">
-
+                    <ul style="max-height: 100%">
+                        <li class="player-actions-list" v-on:click="playerAction('tpto')">
+                            Teleport to Player
+                        </li>
+                        <li class="player-actions-list" v-on:click="playerAction('gethere')">
+                            Get Player here
+                        </li>
+                        <li class="player-actions-list" v-on:click="playerAction('kill')">
+                            Kill Player
+                        </li>
+                        <li class="player-actions-list" v-on:click="playerAction('kick')">
+                            Kick Player
+                            <input class="player-actions-list-input" style="width: 60%" placeholder="..." type="text">
+                        </li>
+                        <li class="player-actions-list" v-on:click="playerAction('heal')">
+                            Heal Player
+                        </li>
+                        <li class="player-actions-list" v-on:click="playerAction('revive')">
+                            Revive
+                        </li>
+                        <li class="player-actions-list" v-on:click="playerAction('model')">
+                            Model
+                            <input class="player-actions-list-input" placeholder="..." type="text">
+                        </li>
+                        <li class="player-actions-list" v-on:click="playerAction('visible')">
+                            Visible: {{players.currentSelected.visible ? 'false': 'true' }}
+                        </li>
+                        <li class="player-actions-list" v-on:click="playerAction('dimension')">
+                            Dimension
+                            <input class="player-actions-list-input" placeholder="..." type="number">
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

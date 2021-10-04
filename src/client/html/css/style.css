@@ -215,3 +215,31 @@ body {
     max-height: 80%;
     top: 6.5vw;
 }
+
+.player-actions-list {
+    width: 107%;
+    height: 1.5vw;
+    margin-top: 1.25%;
+    margin-left: -7%;
+    list-style: none;
+    color: white;
+    border-bottom: 0.1vw solid rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.8);
+    transition: ease-out .4s;
+}
+
+.player-actions-list:hover {
+    cursor: pointer;
+    border-bottom: 0.1vw solid rgba(255, 255, 255, 0.8);
+}
+
+.player-actions-list-input {
+    position: absolute;
+    right: 0;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 0.1vw solid rgba(255, 255, 255, 0.8);
+    color: white;
+    font-family: Poppins, serif;
+}
